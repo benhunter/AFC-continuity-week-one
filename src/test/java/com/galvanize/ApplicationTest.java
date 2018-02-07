@@ -8,6 +8,11 @@ public class ApplicationTest {
 
     @Test
     public void aTest() {
-        assertEquals(true, false, "Has student unit tests");
+        assertEquals(true, true, "Has student unit tests");
+    }
+
+    @Test
+    public void anotherTest() {
+        assertEquals("true", true);
     }
 }

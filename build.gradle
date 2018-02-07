@@ -54,6 +54,7 @@ dependencies {
     assessmentCompile group: 'cglib', name: 'cglib-nodep', version: '2.2'
     assessmentCompile 'org.junit.platform:junit-platform-console:1.0.0'
     assessmentCompile sourceSets.main.output
+    assessmentCompile sourceSets.test.output
     assessmentCompile configurations.testCompile
     assessmentRuntime configurations.testRuntime
 }
