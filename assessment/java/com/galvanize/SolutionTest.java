@@ -1,6 +1,7 @@
 package com.galvanize;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.platform.engine.discovery.ClassNameFilter.includeClassNamePatterns;
 import static org.junit.platform.engine.discovery.DiscoverySelectors.selectClass;
 import static org.junit.platform.engine.discovery.DiscoverySelectors.selectPackage;
@@ -14,12 +15,17 @@ import org.junit.platform.launcher.listeners.SummaryGeneratingListener;
 
 public class SolutionTest {
 
+    SummaryGeneratingListener listener;
+
+    public void setup() {
+
+    }
+
     @Test
-    public void doStuff() {
+    public void verifyTestCount() {
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
                 .selectors(
-                        selectPackage("com.galvanize"),
-                        selectClass(ApplicationTest.class)
+                        selectClass(LightSaberTest.class)
                 )
                 .filters(
                         includeClassNamePatterns(".*Test")
@@ -30,10 +36,12 @@ public class SolutionTest {
         SummaryGeneratingListener listener = new SummaryGeneratingListener();
         launcher.registerTestExecutionListeners(listener);
         launcher.execute(request);
-        listener.getSummary().getFailures().forEach(failure -> {
-            System.out.println(failure.getTestIdentifier().getDisplayName());
-            System.out.println(failure.getException().toString());
-        });
+
+        assertTrue(listener.getSummary().getTestsFoundCount() >= 8, "There are at least 8 tests");
+//        listener.getSummary().getFailures().forEach(failure -> {
+//            System.out.println(failure.getTestIdentifier().getDisplayName());
+//            System.out.println(failure.getException().toString());
+//        });
     }
 
 }
