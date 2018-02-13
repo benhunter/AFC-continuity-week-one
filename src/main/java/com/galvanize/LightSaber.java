@@ -45,12 +45,12 @@ public class LightSaber {
         charge = 100.0f;
     }
 
-//    @Override
-//    public String toString() {
-//        return "LightSaber{" +
-//                "charge=" + charge +
-//                ", jediSerialNumber=" + jediSerialNumber +
-//                ", color='" + color + '\'' +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "LightSaber{" +
+                "charge=" + charge +
+                ", jediSerialNumber=" + jediSerialNumber +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
