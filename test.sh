@@ -1,5 +1,5 @@
 #!/bin/bash
 
-./gradlew clean assess --stacktrace
+./gradlew clean assess
 
 # For more detail, run "./gradlew assess --info"
