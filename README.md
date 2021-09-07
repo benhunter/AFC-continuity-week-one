@@ -34,7 +34,6 @@ This solo sprint is a method of review for the week's important concepts, you ar
 - Create a SpaceShip class with:
   - a fuel property as a float, defaulting to 100.0f
   - a crewList property as an ArrayList containing CrewMember, defaulting to an empty list
-   initialized as a new instance of a SpaceShip
   - a travelFast method, which reduces fuel by 20 and each crew members moral by 10
   - a refuel method, which increases fuel by 50 and reduces each crew members moral by 5
   - a takeItEasy method, which reduces fuel by 5 and increases each crew members moral by 20
