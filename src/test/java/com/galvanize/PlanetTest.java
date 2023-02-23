@@ -15,4 +15,15 @@ class PlanetTest {
         assertEquals(EARTH, planet.getName());
         assertEquals(distanceToNext, planet.getDistanceToNext());
     }
+
+    @Test
+    void generateRandomPlanet() {
+        Planet randomPlanet = Planet.generateRandomPlanet();
+        System.out.println(randomPlanet);
+    }
+
+    @Test
+    void testToString() {
+        System.out.println(Planet.generateRandomPlanet());
+    }
 }

@@ -27,7 +27,7 @@ class SpaceShipTest {
     @Test
     void travelFastReducesFuelAndCrewMorale() {
         SpaceShip spaceShip = new SpaceShip();
-        CrewMember bob = new CrewMember("Bob");
+        CrewMember bob = new CrewMember("Redshirt Bob");
         spaceShip.fillCrew(bob);
         float expectedFuel = 80.0f;
         float expectedMorale = 90.0f;
@@ -86,6 +86,15 @@ class SpaceShipTest {
             actualMorale = crewList.get(0).getMorale();
         }
         assertEquals(expectedMorale, actualMorale);
+    }
 
+    @Test
+    void testToString() {
+        SpaceShip spaceShip = new SpaceShip();
+        CrewMember bob = new CrewMember("Redshirt Bob");
+        Pilot goose = new Pilot("Pilot Goose");
+        spaceShip.fillCrew(bob);
+        spaceShip.fillCrew(goose);
+        System.out.println(spaceShip.toString());
     }
 }

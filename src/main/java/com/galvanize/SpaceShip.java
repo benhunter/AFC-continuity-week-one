@@ -11,7 +11,6 @@ public class SpaceShip {
         return (ArrayList<CrewMember>) crewList.clone();
     }
 
-
     public SpaceShip() {
     }
 
@@ -41,7 +40,7 @@ public class SpaceShip {
 
     private void reduceCrewMorale(float amountToReduce) {
         for (CrewMember member : this.crewList) {
-            member.reduceMorale(amountToReduce);
+            member.decreaseMorale(amountToReduce);
         }
     }
 
@@ -49,5 +48,13 @@ public class SpaceShip {
         for (CrewMember member: this.crewList) {
             member.increaseMorale(amountToIncrease);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "SpaceShip{" +
+                "fuel=" + fuel +
+                ", crewList=" + crewList +
+                '}';
     }
 }

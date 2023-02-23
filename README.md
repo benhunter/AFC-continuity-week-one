@@ -31,7 +31,7 @@ This solo sprint is a method of review for the week's important concepts, you ar
   - [x] a morale property as a float, defaulting to 100.0f
   - [x] a name property as a string that is set in its constructor
 
-- [ ] Create a SpaceShip class with:
+- [x] Create a SpaceShip class with:
   - [x] a fuel property as a float, defaulting to 100.0f
   - [x] a crewList property as an ArrayList containing CrewMember, defaulting to an empty list
   - [x] a travelFast method, which reduces fuel by 20 and each crew members moral by 10

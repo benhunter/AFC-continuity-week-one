@@ -1,6 +1,6 @@
 package com.galvanize;
 
-public class CrewMember {
+public class CrewMember implements HasMorale {
     private final String name;
     private float morale;
 
@@ -13,15 +13,26 @@ public class CrewMember {
         return this.name;
     }
 
+    @Override
     public float getMorale() {
         return this.morale;
     }
 
-    public void reduceMorale(float amountToReduceMorale) {
-        this.morale -= amountToReduceMorale;
+    @Override
+    public void decreaseMorale(float amountToReduce) {
+        this.morale -= amountToReduce;
     }
 
-    public void increaseMorale(float amountToIncreaseMorale) {
-        this.morale += amountToIncreaseMorale;
+    @Override
+    public void increaseMorale(float amountToIncrease) {
+        this.morale += amountToIncrease;
+    }
+
+    @Override
+    public String toString() {
+        return "CrewMember{" +
+                "name='" + name + '\'' +
+                ", morale=" + morale +
+                '}';
     }
 }

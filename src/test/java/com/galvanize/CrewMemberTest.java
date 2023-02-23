@@ -21,7 +21,7 @@ class CrewMemberTest {
         String crewMemberName = "Bob";
         CrewMember crewMember = new CrewMember(crewMemberName);
 
-        crewMember.reduceMorale(10f);
+        crewMember.decreaseMorale(10f);
 
         float actual = crewMember.getMorale();
         assertEquals(expected, actual);
